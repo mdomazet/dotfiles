@@ -34,8 +34,8 @@
     # =========================[ Line #1 ]=========================
     os_icon               # os identifier
     dir                     # current directory
-    context
     vcs                     # git status
+    context
     # =========================[ Line #2 ]=========================
     newline                 # \n
     prompt_char             # prompt symbol
