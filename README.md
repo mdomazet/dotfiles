@@ -12,5 +12,6 @@ $ chezmoi init --apply --verbose https://github.com/mdomazet/dotfiles.git
 
 # Commit changes to chezmoi
 $ git add -A
+$ git commit
 $ git push -u origin main (or master)
 
