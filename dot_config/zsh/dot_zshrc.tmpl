@@ -77,22 +77,20 @@ source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # Enable syntax highlighting in the shell
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 {{ else }}
-local PREFIX='$HOME/.local'
-
 # Key Bindigs (debian)
 source "/usr/share/doc/fzf/examples/key-bindings.zsh"
 
 # Enable Powerlevel10K plugin
-source "$PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme"
+source "$HOME/.local/share/powerlevel10k/powerlevel10k.zsh-theme"
 
 # Powerlevel10k config
 source ~/.config/zsh/.p10k.zsh
 
 # Enable zsh autosuggesting in the shell
-source "$PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Enable syntax highlighting in the shell
-source "$PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 {{ end }}
 #===== END EXTRA ========================================================#
 
