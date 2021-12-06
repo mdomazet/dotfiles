@@ -1,1 +1,10 @@
 README.md
+.local/share/powerlevel10k/gitstatus/gitstatus.plugin.zsh.zwc
+.local/share/powerlevel10k/gitstatus/install.zwc
+.local/share/powerlevel10k/internal/configure.zsh.zwc
+.local/share/powerlevel10k/internal/icons.zsh.zwc
+.local/share/powerlevel10k/internal/p10k.zsh.zwc
+.local/share/powerlevel10k/internal/parser.zsh.zwc
+.local/share/powerlevel10k/internal/worker.zsh.zwc
+.local/share/powerlevel10k/powerlevel10k.zsh-theme.zwc
+.local/share/powerlevel10k/powerlevel9k.zsh-theme.zwc
