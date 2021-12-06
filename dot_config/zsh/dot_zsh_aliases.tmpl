@@ -1,0 +1,32 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+    alias \
+        ls='gls --color=auto --group-directories-first' \
+        egrep='gegrep --color=auto' \
+        fgrep='gfgrep --color=auto' \
+        grep='ggrep --color=auto' \
+        c-flush-dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder' \
+        c-kill-smartcard='pgrep ctk | xargs sudo kill -9'
+{{ else }}
+    alias ls='ls --color=auto --group-directories-first' \
+        grep='grep --color=auto' \
+        fgrep='fgrep --color=auto' \
+        egrep='egrep --color=auto'
+{{ end -}}
+
+alias vim='nvim'
+alias tmux='tmux -2 -f .config/tmux/.tmux.conf'
+alias cp='$HOME/.local/bin/advcp -g -v'
+alias mv='$HOME/.local/bin/advmv -g -v'
+alias tree='tree -FC --charset=ascii'
+alias c-show-aliases='alias'
+alias c-show-path='echo -e ${PATH//:/\\n}'
+alias c-show-wan-ip='curl ifconfig.me'
+alias c-edit-zshrc='vim $HOME/.config/zsh/.zshrc'
+alias c-edit-aliases='vim $HOME/.config/zsh/.zsh_aliases'
+alias c-show-ssh-ciphers='ssh -Q cipher'
+alias c-show-ssh-mac='ssh -Q mac'
+alias c-show-ssh-kex='ssh -Q kex'
+alias c-show-ssh-hostkey='ssh -Q key'
+alias c-show-ssh-remote-algos='nmap --script ssh2-enum-algos -sV '
+
+# vim: set ft=zsh:
