@@ -22,7 +22,7 @@ brew "romkatv/powerlevel10k/powerlevel10k"
 EOF
 {{ else -}}
 #!/bin/sh
-sudo apt install fzf fd grep neovim nmap ripgrep tree wget tmux moreutils
+sudo apt install fzf grep neovim nmap ripgrep tree wget tmux moreutils zsh zsh-common
 {{ end }}
 sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
