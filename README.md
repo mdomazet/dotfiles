@@ -10,9 +10,16 @@ $ git remote add origin https://github.com/mdomazet/dotfiles.git
 $ git push -u origin main (or master)
 ```
 
-# Checkout chezmoi on new machines
+---
+# Install on new machines
 ```
-$ chezmoi init --apply --verbose mdoamzet
+$ apt update && apt install -y curl gpg sudo git && mkdir -p $HOME/.config/chezmoi && cat << EOF > $HOME/.config/chezmoi/chezmoi.toml 
+encryption = "gpg"
+[gpg]
+    symmetric = true
+EOF
+
+$ sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply mdomazet
 ```
 
 # Commit changes to chezmoi
