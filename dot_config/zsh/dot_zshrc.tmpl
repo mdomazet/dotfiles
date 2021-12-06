@@ -58,6 +58,20 @@ export FZF_DEFAULT_OPTS="--height 40% --border"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DEFAULT_COMMAND
 
+# colorful man
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;36m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
+}
+
+
 {{ if (eq .chezmoi.os "darwin") -}}
 # Extend function Path
 FPATH=$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
@@ -91,6 +105,14 @@ source "$HOME/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Enable syntax highlighting in the shell
 source "$HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# SSH Agent Socket
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+
 {{ end }}
 #===== END EXTRA ========================================================#
 
