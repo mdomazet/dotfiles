@@ -16,6 +16,7 @@
 
 alias vim='nvim'
 alias tmux='tmux -2 -f .config/tmux/.tmux.conf'
+alias tma='tmux attach -t "General" || tmux new-session -s "General"'
 alias cp='$HOME/.local/bin/advcp -g -v'
 alias mv='$HOME/.local/bin/advmv -g -v'
 alias tree='tree -FC --charset=ascii'
