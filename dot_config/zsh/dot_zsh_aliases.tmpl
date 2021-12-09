@@ -5,7 +5,8 @@
         fgrep='gfgrep --color=auto' \
         grep='ggrep --color=auto' \
         c-flush-dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder' \
-        c-kill-smartcard='pgrep ctk | xargs sudo kill -9'
+        c-kill-smartcard='pgrep ctk | xargs sudo kill -9' \
+        tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 {{ else }}
     alias ls='ls --color=auto --group-directories-first' \
         grep='grep --color=auto' \
