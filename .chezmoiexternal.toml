@@ -20,5 +20,9 @@
     url = "https://github.com/arcticicestudio/nord-tmux/archive/master.zip"
     exact = true
     stripComponents = 1
+[".config/tmux/prefix-highlight/prefix_highlight.tmux"]
+    type = "file"
+    executable = true
+    url = "https://raw.githubusercontent.com/tmux-plugins/tmux-prefix-highlight/master/prefix_highlight.tmux"
 {{ end }}
 
