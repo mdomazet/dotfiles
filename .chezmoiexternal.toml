@@ -15,6 +15,7 @@
     url = "https://github.com/romkatv/powerlevel10k/archive/refs/heads/master.zip"
     exact = true
     stripComponents = 1
+{{ end }}
 [".config/tmux/nord-tmux"]
     type = "archive"
     url = "https://github.com/arcticicestudio/nord-tmux/archive/master.zip"
@@ -24,5 +25,4 @@
     type = "file"
     executable = true
     url = "https://raw.githubusercontent.com/tmux-plugins/tmux-prefix-highlight/master/prefix_highlight.tmux"
-{{ end }}
 
