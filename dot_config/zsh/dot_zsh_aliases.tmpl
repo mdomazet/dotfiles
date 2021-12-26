@@ -17,16 +17,17 @@
 alias vim='nvim'
 alias tmux='tmux -2 -f .config/tmux/.tmux.conf'
 alias tma='tmux attach -t "General" || tmux new-session -s "General"'
+{{ if (eq .chezmoi.arch "arm64") }}
 
-{{- if (eq .chezmoi.arch "arm64") -}}
 alias cp='$HOME/.local/bin/advcp.arm64 -g -v'
 alias mv='$HOME/.local/bin/advmv.arm64 -g -v'
 
-{{- else if (eq .chezmoi.arch "amd64") -}}
+{{ else if (eq .chezmoi.arch "amd64") }}
+
 alias cp='$HOME/.local/bin/advcp.amd64 -g -v'
 alias mv='$HOME/.local/bin/advmv.amd64 -g -v'
 
-{{- end -}}
+{{ end }}
 alias tree='tree -FC --charset=ascii'
 alias c-show-aliases='alias'
 alias c-show-path='echo -e ${PATH//:/\\n}'
