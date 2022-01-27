@@ -29,6 +29,7 @@ alias mv='$HOME/.local/bin/advmv.amd64 -g -v'
 
 {{ end }}
 alias tree='tree -FC --charset=ascii'
+alias c-set-cursor="echo -ne '\e[4 q'"
 alias c-show-aliases='alias'
 alias c-show-path='echo -e ${PATH//:/\\n}'
 alias c-show-wan-ip='curl ifconfig.me'
